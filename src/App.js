@@ -6,11 +6,13 @@ import ProductDetails from './components/ProductDetails';
 import LikedProducts from './components/LikedProducts';
 import Cart from './components/Cart';
 
-
+//context state
+import CartState from './context/cart/CartState';
 
 function App() {
   return (
     <div className="app-bg-container">
+      <CartState>
       <BrowserRouter>
         <Header/>
         <Routes>
@@ -20,9 +22,10 @@ function App() {
           <Route path='/cart' element={<Cart/>} />
         </Routes>
       </BrowserRouter>
+      </CartState>
     </div>
   );
 }
 
-
+  
 export default App;

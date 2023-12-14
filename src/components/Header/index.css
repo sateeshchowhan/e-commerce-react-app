@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 15px;
+    position: relative;
 }
 
 .header-page__header-logo {
@@ -46,4 +47,19 @@ header .header-page__header-link-items span{
   top: 50%;
   justify-content: center;
   align-items: center;
+}
+.header-page__cart-count{
+    font-weight: bold;
+    background-color: rgb(248, 5, 5);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 40px;
+    right: 6px;
+    font-size: 14px;
+    color: white;
 }

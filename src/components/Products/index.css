@@ -71,6 +71,22 @@
     justify-content:center;
 }
 
+.products-page-btns{
+    text-align: right;
+}
+
+.products-page-inc-and-dec-btns{
+    display: flex;
+    gap: 3px;
+
+}
+
+.products-page-dec{
+    width: 30px;
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+}
+
 
 
 
