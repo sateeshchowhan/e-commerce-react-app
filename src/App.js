@@ -8,6 +8,8 @@ import Cart from './components/Cart';
 
 //context state
 import CartState from './context/cart/CartState';
+import Checkout from './components/Checkout';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
           <Route path='/product/:id' element={<ProductDetails/>} />
           <Route path='/liked-products' element={<LikedProducts/>} />
           <Route path='/cart' element={<Cart/>} />
+          <Route path='/checkout' element={<Checkout/>}/>
         </Routes>
       </BrowserRouter>
       </CartState>
