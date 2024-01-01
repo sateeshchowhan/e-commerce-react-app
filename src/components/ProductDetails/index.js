@@ -18,8 +18,6 @@ const ProductDetails = () => {
     }, [])
 
     const getProducts = async () => {
-        // const url ='http://localhost:8080/products'
-        // const url =`https://jsonplaceholder.typicode.com/products/${id}`
         const url =`https://dummyjson.com/products/${id}`
         const response = await fetch(url)
         const data = await response.json()
@@ -36,12 +34,7 @@ const ProductDetails = () => {
     return (
         <div className="product-details-page__bg-container">
             <div className='product-details-page__product-details-card'>
-                {/* <img className='product-details-page__product-img' src={productDetails.images[0]} alt="product img" />   
-                <p> {productDetails.title}</p>
-                <p>{productDetails.brand}</p>
-                <p>${productDetails.price}</p>
-                <p>{productDetails.rating}</p> 
-                <button>+Add To Cart</button> */}
+            
             </div>
         </div>
     )

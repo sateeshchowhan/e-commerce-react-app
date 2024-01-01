@@ -18,9 +18,9 @@ const CartState = (props) => {
     localStorage.setItem("checkoutArr", JSON.stringify(checkoutArr));
   }, [state, checkoutArr]);
 
-  const addToCart = ({ id, imgUrl, title,price }) => {
+  const addToCart = ({ id, imgUrl, title,description, price }) => {
     const existingProductIndex = state.findIndex((product) => product.id === id);
-    
+
     if (existingProductIndex !== -1) {
       // Product already exists in the cart, update the quantity and isChecked
       const updatedCart = [...state];
@@ -29,7 +29,7 @@ const CartState = (props) => {
       setState(updatedCart);
     } else {
       // Product is not in the cart, add it with quantity 1 and isChecked true
-      setState((prev)=>[...prev, { id, imgUrl, title,price, quantity: 1, isChecked: true },]);
+      setState((prev) => [...prev, { id, imgUrl, title,description, price, quantity: 1, isChecked: true },]);
     }
   };
 
@@ -67,4 +67,4 @@ const CartState = (props) => {
   );
 };
 
-export default CartState;
+export default CartState;

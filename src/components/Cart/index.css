@@ -111,3 +111,10 @@
     background-color: #c0392b;
   }
   
+  .cart-page__delete-item-btn{
+    top: 10px;
+    position: relative;
+    background-color: white;
+    border: 0;
+    color: red;
+  }

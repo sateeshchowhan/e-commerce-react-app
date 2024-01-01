@@ -102,19 +102,15 @@ const Products = () => {
     const [products, setProducts] = useState()
     
     
-    
-
     useEffect(() => {
         getProducts()
     }, [])
 
     const getProducts = async () => {
-        // const url ='http://localhost:8080/products'
-        // const url ='https://jsonplaceholder.typicode.com/users'
         const url = 'https://dummyjson.com/products'
         const response = await fetch(url)
         const data = await response.json()
-        // console.log(data)
+        console.log(data)
 
         if (!response.ok) {
             alert("Backend Error")
@@ -123,9 +119,6 @@ const Products = () => {
             setProducts(data.products)
         }
     }
-
-
-
 
 
     const CategoryItem = (props) => {
@@ -140,9 +133,6 @@ const Products = () => {
         )
     }
 
-
-
-
     const PriceItem = (props) => {
         const { eachItem } = props;
         const { price, group } = eachItem;
@@ -154,7 +144,6 @@ const Products = () => {
             </li>
         )
     }
-
 
 
     const ColorsItem = (props) => {
@@ -201,15 +190,12 @@ const Products = () => {
         Swal.fire({
             title,
             text: description,
-            imageUrl: images[0],//'https://unsplash.it/400/200',
+            imageUrl: images[0],
             imageWidth: 400,
             imageHeight: 200,
             imageAlt: "product image"
         });
     };
-
-
-
 
     const ProductItem = (props) => {
         const { product } = props
@@ -226,17 +212,6 @@ const Products = () => {
                 <button className='products-page__product-button' onClick={() => alertFunction(title, description, images)}>View</button>
                 <button className='products-page__product-button' onClick={() => cartDetailsFromContext.addToCart({id,imgUrl,title,price})}>+Add</button> 
             </li>
-
-            // <li className='products-page__product-item'>
-            //     <Link to={`/product/${id}`} className='products-page__product-link-item'>
-            //         <div className='products-page__product-item-details-wrapper'>
-            //         <img className='products-page__product-img' src={images[0]} alt="product img" /> ,  
-            //             <p className='products-page__product-title'>{title}</p>
-            //           <p className='products-page__product-description'>{description}</p>,
-            //           <button className='products-page__product-button'>Add</button>
-            //         </div>
-            //     </Link>
-            // </li>
         );
     }
 
