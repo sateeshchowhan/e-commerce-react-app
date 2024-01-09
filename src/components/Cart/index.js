@@ -69,7 +69,7 @@ const Cart = () => {
     navigate('/checkout');
   }
 
-  // Render the Cart component
+  // The following JSX code represents a section of a React component rendering a list of cart items.
   return (
     <div className='cart-page__bg-container'>
       <h1>Cart Items</h1>
